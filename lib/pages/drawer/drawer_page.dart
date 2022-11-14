@@ -36,7 +36,8 @@ class _DrawerPageState extends State<DrawerPage> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      elevation: 0,
+      elevation: 2,
+      backgroundColor: Colors.white,
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(Constants.kPadding * 4),
@@ -46,7 +47,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 title: Text(
                   "Menu de Admin",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.black45,
                   ),
                 ),
                 trailing: !ResponsiveLayout.isComputer(context)
@@ -99,7 +100,7 @@ class _DrawerPageState extends State<DrawerPage> {
                       ),
                     ),
                     Divider(
-                      color: Colors.white,
+                      color: Colors.black45,
                       thickness: 0.1,
                     ),
                   ],

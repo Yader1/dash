@@ -90,7 +90,7 @@ class PieChart2State extends State {
           bottom: Constants.kPadding,
           right: Constants.kPadding / 2),
       child: Card(
-        color: Constants.purpleLight,
+        color: Colors.white,
         elevation: 3,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -247,7 +247,7 @@ class Indicator extends StatelessWidget {
     required this.text,
     required this.isSquare,
     this.size = 16,
-    this.textColor = Colors.white70,
+    this.textColor = Colors.black54,
   }) : super(key: key);
 
   @override
@@ -297,7 +297,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
           bottom: Constants.kPadding,
           right: Constants.kPadding / 2),
       child: Card(
-        color: Constants.purpleLight,
+        color: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         elevation: 3,
         child: Stack(
@@ -333,8 +333,8 @@ class _LineChartSample2State extends State<LineChartSample2> {
                   style: TextStyle(
                       fontSize: 12,
                       color: showAvg
-                          ? Colors.white.withOpacity(0.5)
-                          : Colors.white),
+                          ? Colors.black54.withOpacity(0.5)
+                          : Colors.black54),
                 ),
               ),
             ),
@@ -366,11 +366,11 @@ class _LineChartSample2State extends State<LineChartSample2> {
         show: true,
         bottomTitles: SideTitles(
           showTitles: true,
-          reservedSize: 22,
+          reservedSize: 18,
           getTextStyles: (value) => const TextStyle(
               color: Color(0xff68737d),
               fontWeight: FontWeight.bold,
-              fontSize: 16),
+              fontSize: 12),
           getTitles: (value) {
             switch (value.toInt()) {
               case 2:
@@ -389,7 +389,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
           getTextStyles: (value) => const TextStyle(
             color: Color(0xff67727d),
             fontWeight: FontWeight.bold,
-            fontSize: 15,
+            fontSize: 12,
           ),
           getTitles: (value) {
             switch (value.toInt()) {
@@ -572,7 +572,7 @@ class LineChartSample1State extends State<LineChartSample1> {
       child: AspectRatio(
         aspectRatio: 1,
         child: Card(
-          color: Constants.purpleLight,
+          color: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           elevation: 3,
@@ -585,9 +585,9 @@ class LineChartSample1State extends State<LineChartSample1> {
                     height: 37,
                   ),
                   const Text(
-                    'Unfold Shop 2021',
+                    'Grafica 3',
                     style: TextStyle(
-                      color: Color(0xff827daa),
+                      color: Colors.black87,
                       fontSize: 16,
                     ),
                     textAlign: TextAlign.center,
@@ -596,10 +596,10 @@ class LineChartSample1State extends State<LineChartSample1> {
                     height: 4,
                   ),
                   const Text(
-                    'Monthly Sales',
+                    'Descripcion',
                     style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
+                        color: Colors.redAccent,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 2),
                     textAlign: TextAlign.center,
@@ -626,7 +626,7 @@ class LineChartSample1State extends State<LineChartSample1> {
                 icon: Icon(
                   Icons.refresh,
                   color:
-                      Colors.white.withOpacity(isShowingMainData ? 1.0 : 0.5),
+                      Colors.red.shade300.withOpacity(isShowingMainData ? 1.0 : 0.5),
                 ),
                 onPressed: () {
                   setState(() {
@@ -660,7 +660,7 @@ class LineChartSample1State extends State<LineChartSample1> {
           getTextStyles: (value) => const TextStyle(
             color: Color(0xff72719b),
             fontWeight: FontWeight.bold,
-            fontSize: 16,
+            fontSize: 12,
           ),
           margin: 10,
           getTitles: (value) {
@@ -680,7 +680,7 @@ class LineChartSample1State extends State<LineChartSample1> {
           getTextStyles: (value) => const TextStyle(
             color: Color(0xff75729e),
             fontWeight: FontWeight.bold,
-            fontSize: 14,
+            fontSize: 12,
           ),
           getTitles: (value) {
             switch (value.toInt()) {
@@ -812,7 +812,7 @@ class LineChartSample1State extends State<LineChartSample1> {
           getTextStyles: (value) => const TextStyle(
             color: Color(0xff72719b),
             fontWeight: FontWeight.bold,
-            fontSize: 16,
+            fontSize: 12,
           ),
           margin: 10,
           getTitles: (value) {
@@ -832,7 +832,7 @@ class LineChartSample1State extends State<LineChartSample1> {
           getTextStyles: (value) => const TextStyle(
             color: Color(0xff75729e),
             fontWeight: FontWeight.bold,
-            fontSize: 14,
+            fontSize: 12,
           ),
           getTitles: (value) {
             switch (value.toInt()) {
@@ -1001,7 +1001,7 @@ class BarChartSample2State extends State<BarChartSample2> {
       child: AspectRatio(
         aspectRatio: 1,
         child: Card(
-          color: Constants.purpleLight,
+          color: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           elevation: 3,
@@ -1021,13 +1021,13 @@ class BarChartSample2State extends State<BarChartSample2> {
                   children: <Widget>[
                     //makeTransactionsIcon(),
                     const Text(
-                      'Monthly Profits',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      'Grafica 2',
+                      style: TextStyle(color: Colors.black87, fontSize: 18),
                     ),
                     const Text(
                       r'$345,462',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.green,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -1041,19 +1041,19 @@ class BarChartSample2State extends State<BarChartSample2> {
                   children: <Widget>[
                     const Text(
                       'Of ',
-                      style: TextStyle(color: Color(0xff77839a), fontSize: 16),
+                      style: TextStyle(color: Color(0xff77839a), fontSize: 14),
                     ),
                     Text(
                       'Sales ',
-                      style: TextStyle(color: leftBarColor, fontSize: 16),
+                      style: TextStyle(color: leftBarColor, fontSize: 14),
                     ),
                     const Text(
                       'And ',
-                      style: TextStyle(color: Color(0xff77839a), fontSize: 16),
+                      style: TextStyle(color: Color(0xff77839a), fontSize: 14),
                     ),
                     Text(
                       'Orders',
-                      style: TextStyle(color: rightBarColor, fontSize: 16),
+                      style: TextStyle(color: rightBarColor, fontSize: 14),
                     ),
                   ],
                 ),
@@ -1123,7 +1123,7 @@ class BarChartSample2State extends State<BarChartSample2> {
                             getTextStyles: (value) => const TextStyle(
                                 color: Color(0xff7589a2),
                                 fontWeight: FontWeight.bold,
-                                fontSize: 14),
+                                fontSize: 12),
                             margin: 20,
                             getTitles: (double value) {
                               switch (value.toInt()) {
@@ -1151,7 +1151,7 @@ class BarChartSample2State extends State<BarChartSample2> {
                             getTextStyles: (value) => const TextStyle(
                                 color: Color(0xff7589a2),
                                 fontWeight: FontWeight.bold,
-                                fontSize: 14),
+                                fontSize: 12),
                             margin: 32,
                             reservedSize: 14,
                             getTitles: (value) {
@@ -1211,7 +1211,7 @@ class BarChartSample2State extends State<BarChartSample2> {
         Container(
           width: width,
           height: 10,
-          color: Colors.white.withOpacity(0.4),
+          color: Colors.red.shade300.withOpacity(0.4),
         ),
         const SizedBox(
           width: space,

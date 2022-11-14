@@ -2,7 +2,7 @@ import 'package:admin_panel_responsive_flutter/constants.dart';
 import 'package:admin_panel_responsive_flutter/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
-List<String> _buttonNames = ["Overview", "Revenue", "Sales", "Control"];
+List<String> _buttonNames = ["Page 1", "Page 2", "Page 3", "Page 4"];
 int _currentSelectedButton = 0;
 
 class AppBarWidget extends StatefulWidget {
@@ -37,7 +37,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             )
           else
             IconButton(
-              color: Colors.redAccent,
+              color: Colors.red.shade300,
               iconSize: 30,
               onPressed: () {
                 Scaffold.of(context).openDrawer();
@@ -110,7 +110,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   Text(
                     _buttonNames[_currentSelectedButton],
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.red.shade300,
                     ),
                   ),
                   Container(

@@ -1,10 +1,11 @@
-import 'package:admin_panel_responsive_flutter/constants.dart';
 import 'package:admin_panel_responsive_flutter/pages/drawer/drawer_page.dart';
+import 'package:admin_panel_responsive_flutter/pages/panel_center/panel_center_list.dart';
 import 'package:admin_panel_responsive_flutter/pages/panel_center/panel_center_page.dart';
 import 'package:admin_panel_responsive_flutter/pages/panel_left/panel_left_page.dart';
 import 'package:admin_panel_responsive_flutter/pages/panel_right/panel_right_page.dart';
 import 'package:admin_panel_responsive_flutter/pages/widgets/app_bar_widget.dart';
 import 'package:admin_panel_responsive_flutter/responsive_layout.dart';
+import 'package:admin_panel_responsive_flutter/utils/dimenciones.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +32,7 @@ class _WidgetTreeState extends State<WidgetTree> {
                 ResponsiveLayout.isTinyHeightLimit(context))
             ? Container()
             : AppBarWidget(),
+            
       ),
       body: ResponsiveLayout(
         tiny: Container(),
@@ -56,24 +58,24 @@ class _WidgetTreeState extends State<WidgetTree> {
             )
           ],
         ),
-        computer: Row(
-          children: [
-            Expanded(child: DrawerPage()),
-            Expanded(child: PanelLeftPage()),
-            Expanded(
-              child: PanelCenterPage(),
-            ),
-            Expanded(
-              child: PanelRightPage(),
-            )
-          ],
+        computer: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Row(
+              children: [
+                Expanded(child: DrawerPage()),
+                SizedBox(width: 5,),
+                Expanded(flex: 3, child: PanelCenterItem()),
+                //Expanded(child: PanelLeftPage()),
+                //Expanded(child: PanelCenterPage()),
+                //Expanded(child: PanelRightPage())
+              ],),
         ),
-      ),
+          ),
       drawer: DrawerPage(),
       bottomNavigationBar: ResponsiveLayout.isPhone(context)
           ? CurvedNavigationBar(
               index: currentIndex,
-              backgroundColor: Constants.purpleDark,
+              backgroundColor: Colors.red.shade300,
               items: _icons,
               onTap: (index) {
                 setState(() {
