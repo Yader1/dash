@@ -1,11 +1,9 @@
-import 'dart:ui';
-
 import 'package:admin_panel_responsive_flutter/pages/panel_center/panel_center_page.dart';
 import 'package:admin_panel_responsive_flutter/pages/panel_right/panel_right_page.dart';
-import 'package:admin_panel_responsive_flutter/pages/widgets/app_colum_widget.dart';
-import 'package:admin_panel_responsive_flutter/pages/widgets/app_content_colum_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/app_colum_widget.dart';
+import '../../widgets/app_content_colum_widget.dart';
 import '../charts.dart';
 import '../panel_left/panel_left_page.dart';
 
@@ -19,11 +17,11 @@ class PanelCenterItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,    
             children: [
               Expanded(
+                flex: 2,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(5.0),
                   child: Container(
-                    height: 200,
-                    width: 100,
+                    height: 300,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -52,24 +50,24 @@ class PanelCenterItem extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(
-                child: ContentColum(),
+              ContentColum(
+                backgroundColor: Colors.amber.shade100, 
+                progressBackgroundColor: Colors.white, 
+                progressColor: Colors.amber.shade800,
               ),
-              SizedBox(width: 5.0),
-              Expanded(
-                child: Container(
-                  height: 200,
-                  color: Colors.green.shade200,
-                  child: Text("item 2"),
-                ),
+              SizedBox(width: 10.0),
+              ContentColum(
+                backgroundColor: Colors.red.shade100, 
+                progressBackgroundColor: Colors.white, 
+                progressColor: Colors.red.shade800, 
+                pathImage: "images/logo_sen.png",
               ),
-              SizedBox(width: 5.0),
-              Expanded(
-                child: Container(
-                  height: 200,
-                  color: Colors.blue.shade200,
-                  child: Text("item 3"),
-                ),
+              SizedBox(width: 10.0),
+              ContentColum(
+                backgroundColor: Colors.blue.shade100, 
+                progressBackgroundColor: Colors.white, 
+                progressColor: Colors.blue.shade800,
+                pathImage: "images/hp.png",
               ),
             ],
           ),

@@ -2,7 +2,7 @@ import 'package:admin_panel_responsive_flutter/constants.dart';
 import 'package:admin_panel_responsive_flutter/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
-List<String> _buttonNames = ["Page 1", "Page 2", "Page 3", "Page 4"];
+List<String> _buttonNames = ["Page 1", "Page 2", "Page 3"];
 int _currentSelectedButton = 0;
 
 class AppBarWidget extends StatefulWidget {
@@ -23,16 +23,16 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               height: double.infinity,
               decoration: BoxDecoration(boxShadow: [
                 BoxShadow(
-                  color: Colors.black45,
+                  color: Colors.black12,
                   offset: Offset(0, 0),
                   spreadRadius: 1,
                   blurRadius: 10,
                 )
               ], shape: BoxShape.circle),
               child: CircleAvatar(
-                backgroundColor: Colors.pink,
-                radius: 30,
-                child: Image.asset("images/mapp.png"),
+                backgroundColor: Colors.white,
+                radius: 40,
+                child: Image.asset("images/logo.png"),
               ),
             )
           else
@@ -60,7 +60,10 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           if (ResponsiveLayout.isComputer(context))
             ...List.generate(
               _buttonNames.length,
-              (index) => TextButton(
+              (index) => TextButton(     
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 18, color: Colors.black),
+                ), 
                 onPressed: () {
                   setState(() {
                     _currentSelectedButton = index;

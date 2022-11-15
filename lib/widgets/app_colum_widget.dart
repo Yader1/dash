@@ -15,7 +15,7 @@ class RecentDiscussions extends StatelessWidget {
         color: Colors.white,
         borderRadius: const BorderRadius.all(Radius.circular(10)),
         boxShadow: [
-          BoxShadow(color: Colors.black45, offset: Offset(1, 1),
+          BoxShadow(color: Colors.black38, offset: Offset(1, 1),
             spreadRadius: 0.5,
             blurRadius: 5,
           )
