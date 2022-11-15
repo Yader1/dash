@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../models/recent_discussions.dart';
+import '../../models/items.dart';
 import '../../utils/color_ful.dart';
 
 class RecentDiscussions extends StatelessWidget {

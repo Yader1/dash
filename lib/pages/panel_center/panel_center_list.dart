@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:admin_panel_responsive_flutter/pages/panel_center/panel_center_page.dart';
 import 'package:admin_panel_responsive_flutter/pages/panel_right/panel_right_page.dart';
 import 'package:admin_panel_responsive_flutter/pages/widgets/app_colum_widget.dart';
+import 'package:admin_panel_responsive_flutter/pages/widgets/app_content_colum_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../charts.dart';
@@ -52,12 +53,7 @@ class PanelCenterItem extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Container(
-                  height: 200,
-                  width: 100,
-                  color: Colors.amber.shade200,
-                  child: Text("item 1"),
-                ),
+                child: ContentColum(),
               ),
               SizedBox(width: 5.0),
               Expanded(
