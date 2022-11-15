@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
       title: 'Admin Panel',
       theme: ThemeData(
           scaffoldBackgroundColor: Constants.purpleDark,
-          primarySwatch: Colors.blue,
           canvasColor: Constants.purpleLight),
       home: WidgetTree(),
     );
